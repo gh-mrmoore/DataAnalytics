@@ -1,3 +1,3 @@
 # Data Analytics
 
-Work on non-DataCamp data analytics will be saved here.
+Work from KU Data Analytics Boot Camp will be saved here.
