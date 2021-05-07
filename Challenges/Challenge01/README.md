@@ -3,10 +3,10 @@
 ## Overview of Project
 
 ### Background
-Our client wishes to compare the results of their recent Kickstarter campaign with those of campaigns created on the same platform between 2009 and 2017.
+Our client wishes to compare the results of their recent Kickstarter campaign with those of campaigns created on the same platform between 2009 and 2017. The client's campaign was for a play, which would fall under the "theater" parent category and the "plays" sub-category. Our client has estimated a potential budget of just over $10,000 and the campaign initiated by the client has come very close to reaching that goal.
 
 ### Purpose
-Create visualizations of Kickstarter results between 2009 and 2017 to compare campaign results based on the launch date and the outcome given the campaign goal. Analysis of this dataset could yield improved campaign performance in the future.
+Create visualizations of Kickstarter results between 2009 and 2017 to compare campaign results based on the launch date and the outcome given the campaign goal. Analysis of this dataset could yield improved campaign performance in the future. This analysis will also be compared to the client's campaign results to improve any future campaign conducted by the client.
 
 ## Analysis and Challenges
 
@@ -30,9 +30,10 @@ Some potential difficulties could include:
 ## Results
 
 ### Outcomes Based on Launch Date: First Conclusion
-To increase the likelihood of a successful campaign, it could be beneficial to launch the campaign during May, June or July of a given year.
+To increase the likelihood of a successful campaign, it could be beneficial to launch the campaign during May, June or July of a given year. These three months had both the highest numbers of campaigns total and, relatively, the highest success rates for theater-related campaigns.
 
 ### Outcomes Based on Launch Date: Second Conclusion
+To avoid a failed campaign, it would be best to launch any theater-related campaign during months other than October, November, December or January. These four months had among the lowest number of theater-related campaigns launched and had a relatively higher campaign failure rate.
 
 ### Outcomes Based on Goals: First Conclusion
 The highest likelihood of success lies with campaigns whose fundraising goal is less than $10,000. To improve the likelihood of success, setting a goal around this amount is advisable.
