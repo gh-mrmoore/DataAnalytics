@@ -9,9 +9,8 @@
 ## Results
 
 ### Stock Comparison: 2017 vs. 2018
-All Stocks (2018)			All Stocks (2017)	
-				
 | Ticker | Total Daily Volume (2018) | Return(2018) | Total Daily Volume (2017) | Return |
+| ----- | ----- | ----- | ----- | ----- |
 | AY | 83,079,900 | -7.3% | 136,070,900 | 8.9% |
 | CSIQ | 200,879,900 | -16.3% | 310,592,800 | 33.1% |
 | DQ | 107,873,900 | -62.6% | 35,796,200 | 199.4% |
@@ -24,6 +23,12 @@ All Stocks (2018)			All Stocks (2017)
 | SPWR | 538,024,300 | -44.6% | 782,187,000 | 23.1% |
 | TERP | 151,434,700 | -5.0% | 139,402,800 | -7.2% |
 | VSLR | 136,539,100 | -3.5% | 109,487,900 | 50.0% |
+
+#### 2017
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge02/Resources/VBA_Challenge_2017.png" alt="" />
+
+#### 2018
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge02/Resources/VBA_Challenge_2018.png" alt="" />
 
 ### Script Execution Time
 | Year | Trial 1 | Trial 2 | Trial 3 | Trial 4 | Trial 5 |
