@@ -86,6 +86,7 @@ Without additional comments within the code, it may not be readily apparent how 
     Next i
 
 In the initial code, a nested loop ran 11 times (once for each stock) and then looped over the entirety of the stocks datasets (3,012 rows for both 2017 and 2018).
+
     For i = 0 To 11
         ....        
         For j = rowStart To rowCount
