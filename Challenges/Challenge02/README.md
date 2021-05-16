@@ -93,4 +93,5 @@ In the initial code, a nested loop ran 11 times (once for each stock) and then l
         Next j
         ' Output results to the summary sheet
     Next i
+
 It may also complicate the de-bugging process by having an increased sensitivity to indentation, greater inter-dependency on disparate elements of the program, and creating more lines of code to debug. Again, though, the increase in execution-time performance seems to far outweigh any potential drawbacks.
