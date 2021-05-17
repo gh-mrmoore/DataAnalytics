@@ -41,7 +41,6 @@ with open(file_to_load) as election_data:
         
         candidate_votes[candidate_name] += 1
 
-
 # print(total_votes)
 # for names in candidate_options:
 #     print(names)
@@ -57,10 +56,23 @@ for candidate_name in candidate_votes:
         winning_candidate = candidate_name
 print(f'The winning candidate was: {winning_candidate} with {winning_count:,} votes totaling {winning_percentage:.1f}% of the vote.')
 
-"""
+winner_summary = (
+    f'-------------------------\n'
+    f'Winner: {winning_candidate}\n'
+    f'Winning Vote Count: {winning_count:,}\n'
+    f'Winning Percentage: {winning_percentage:.1f}\n'
+    f'-------------------------\n'
+)
+
 #outfile = open(file_to_save, "w")
 with open(file_to_save, "w") as txt_file:
-    txt_file.write("Counties in Election\n")
-    txt_file.write("--------------------\n")
-    txt_file.write("Arapahoe\nDenver\nJefferson")
-"""
+    txt_file.write(f'Election Results\n')
+    txt_file.write(f'-------------------------\n')
+    txt_file.write(f'{total_votes:,}\n')
+    txt_file.write(f'-------------------------\n')
+    for candidate_name in candidate_votes:
+        cand_votes = candidate_votes[candidate_name]
+        candidate_vote_percentage = (float(cand_votes) / float(total_votes)) * 100
+        txt_file.write(f'{candidate_name}: received {candidate_vote_percentage:.1f}% of the vote.\n')
+    txt_file.write(f'-------------------------\n')
+    txt_file.write(winner_summary)
