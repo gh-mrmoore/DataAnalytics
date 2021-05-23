@@ -50,7 +50,6 @@ with open(file_to_load) as election_data:
         # 3: Extract the county name from each row.
         this_county_name = row[1]
 
-
         # If the candidate does not match any existing candidate add it to
         # the candidate list
         if candidate_name not in candidate_options:
@@ -69,7 +68,6 @@ with open(file_to_load) as election_data:
         if this_county_name not in county_list:
             county_list.append(this_county_name)   # 4b: Add the existing county to the list of counties.
             county_votes_dict[this_county_name] = 0   # 4c: Begin tracking the county's vote count.
-
 
         county_votes_dict[this_county_name] += 1   # 5: Add a vote to that county's vote count.
 
@@ -99,6 +97,7 @@ with open(file_to_save, "w") as txt_file:
         if votes > highest_vote_count:
              county_with_most_votes = counties
              highest_vote_count = votes
+    # moved these lines from the original script to make formatting output easier
     print(counties_summary)    # 6d: Print the county results to the terminal.
     county_summary_written = counties_summary + "\n"
     txt_file.write(county_summary_written)   # 6e: Save the county votes to a text file.
@@ -113,7 +112,6 @@ with open(file_to_save, "w") as txt_file:
 
     # 8: Save the county with the largest turnout to a text file.
     txt_file.write(county_most_votes_output)
-
 
     # Save the final candidate vote count to the text file.
     for candidate_name in candidate_votes:
