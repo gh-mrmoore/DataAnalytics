@@ -27,6 +27,8 @@ my_pet = {
     }
 }
 
+print(type(my_pet))
 print(f'My pet is named {my_pet["pet_name"]} and {my_pet["pet_name"]} is {my_pet["pet_age"]}')
+print(f'My pet, {my_pet["pet_name"]}, has {len(my_pet["pet_hobbies"])} hobbies.')
 print(f'{my_pet["pet_name"]} has a favorite activity and it is {my_pet["pet_hobbies"][1]}')
 print(f'On Tuesday, {my_pet["pet_name"]} woke up at {my_pet["pet_wakeups"]["Tuesday"]}')
