@@ -24,19 +24,18 @@ print("Let's Play Rock Paper Scissors!")
 
 # Specify the three options
 options = ["r", "p", "s"]
-
 # Computer Selection
-# computer_choice = random.choice(options)
+computer_choice = random.choice(options)
 
 # User Selection
-# user_choice = input("Make your Choice: (r)ock, (p)aper, (s)cissors? ")
+user_choice = input("Make your Choice: (r)ock, (p)aper, (s)cissors? ")
 
-computer_choice = "r"
-user_choice = "s"
 # Run Conditionals
 if (computer_choice == "r") and (user_choice == "s") or \
     (computer_choice == "s") and (user_choice == "p") or \
     (computer_choice == "p") and (user_choice == "r"):
-    print("You lose")
+    print(f'You chose {user_choice} and the computer chose {computer_choice}. You lose!')
+elif (computer_choice == user_choice):
+    print(f'You chose {user_choice} and the computer chose {computer_choice}. Tie!')
 else:
-    ("Something strange happened here.")
+    print(f'You chose {user_choice} and the computer chose {computer_choice}. You win!')

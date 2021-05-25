@@ -21,7 +21,7 @@ else:
 x = 5
 y = 10
 if len("Dog") < x:
-    print("Question 2 works!") # this line should print since 3 is not less than 5, quote marks don't count
+    print("Question 2 works!") # this line should print since 3 is less than 5, quote marks don't count
 else:
     print("Still missing out")
 
