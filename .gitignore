@@ -5,6 +5,8 @@ ku-virt-data-pt-04-2021-u-b/
 .vscode/
 MyLibrary/
 config.py
+API_practice.ipynb
+random_numbers.ipynb
 
 # Additions from standard GitHub .gitignore for Python
 
