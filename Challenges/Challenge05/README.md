@@ -3,9 +3,10 @@
 ## Overview of Project
 
 ### Background
+Two datasets have been provided for analysis, information regarding various cities served by PyBer and the classification for each city in addition to information regarding fares received from trips originating within each city. These datasets were combined using Python and pandas and then analyzed to yield a variety of insights. Company executives will use this data and analysis to chart future action plans for PyBer.
 
 ### Purpose
-
+Use Python and pandas to create a summary DataFrame of ride-sharing data by city type to analyze weekly fares. Chart the weekly fares over time and provide a recommendations based on the fare information for each city type and how certain actions could improve company profits.
 
 ## Analysis
 
