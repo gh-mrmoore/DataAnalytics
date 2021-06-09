@@ -3,7 +3,7 @@
 DROP TABLE IF EXISTS players;
 
 -- Create players table
-CREATE TABLE players (
+CREATE TABLE nba_players (
   id INT,
   player VARCHAR,
   height INT,
@@ -15,13 +15,13 @@ CREATE TABLE players (
 );
 
 -- Verify successful data import
-SELECT * FROM players;
+SELECT * FROM nba_players;
 
 -- Drop if exists
 DROP TABLE IF EXISTS seasons_stats;
 
 -- Create seasons states table
-CREATE TABLE seasons_stats (
+CREATE TABLE nba_stats (
   player_id INT,
   year DEC,
   position VARCHAR,
