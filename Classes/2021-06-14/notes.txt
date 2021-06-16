@@ -1,0 +1,14 @@
+Basic REGEX matching.
+
+Regex.Matches method will be used repeatedly.
+
+search an input string for all occurrences of a regex and returns all the matching results
+
+use \n (new line) to create rows in a dataframe from a text file or something similar
+
+search_term = ''
+text_df[text_df['text].str.contains(search_term)]
+
+if we want to look for a trailing space:
+search_term = 'term\s'
+
