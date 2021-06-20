@@ -49,7 +49,7 @@ Determine the potential impact of "Baby Boomer" retirements across the company. 
 | Technique Leader | ~47:1 |
 | All Titles | ~47:1 |
 
-### Table 3: Ratio of Potential Vacancies to Existing Roles
+### Table 3: Percentage of Potential Vacancies to Existing Roles
 | Title | Ratio |
 | ----- | ----- |
 | Assistant Engineer | 30-49% |
@@ -65,7 +65,7 @@ Determine the potential impact of "Baby Boomer" retirements across the company. 
 * Over 90,000 employees may retire soon.
 * Between 30 and 37 percent of the current active employee workforace either is or soon will be eligible for full Social Security retirement benefits.
 * There appear to be no employees in a "Manager" role eligible to serve in the mentorship program.
-* The "Staff" and "Assistant Engineer" categories appear to be the potentially hardest-hit areas.
+* Per Table 3, the "Staff" and "Assistant Engineer" categories appear to be the potentially hardest-hit areas. Pecentages vary depending on whether 90,398 is used as the number of retiring employees or 72,458 is used.
 
 ## Summary
 * How many roles will need to be filled as the "silver tsunami" begins to make an impact?
