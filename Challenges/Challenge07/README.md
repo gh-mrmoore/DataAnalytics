@@ -14,12 +14,16 @@ Determine the potential impact of "Baby Boomer" retirements across the company. 
 ## Analysis of Student and School Performance
 
 ### Figure 1: Count of Retiring Employees
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge07/Resources/Fig1_retiring_titles.png" alt="Count of Retiring Employees" />
 
 ### Figure 2: Count of Retiring Employees (Excluding Inactive Employees)
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge07/Resources/Fig2_retiring_titles_active_only.png" alt="Count of Retiring Employees (Excluding Inactive Employees)" />
 
 ### Figure 3: Potential Mentors to Potential Vacancies Comparison
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge07/Resources/Fig3_mentors_to_retirees.png" alt="Potential Mentors to Potential Vacancies Comparison" />
 
 ### Figure 4: Potential Mentors to Potential Vacancies Comparison (Excluding Inactive Employees)
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge07/Resources/Fig4_mentors_to_retirees_active_only.png" alt="Potential Mentors to Potential Vacancies Comparison (Excluding Inactive Employees)" />
 
 ### Table 1: Ratio of Vacancies to Potential Mentors
 | Title | Ratio |
