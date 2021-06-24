@@ -45,7 +45,12 @@ def welcome():
 
 """TODO: Handle API route with variable path to allow getting info
 for a specific character based on their 'superhero' name """
-
+@app.route("/api/v1.0/justice-league/<search>")
+def hero(search=None):
+    for hero in justice_league_members:
+        if hero["superhero"] == search:
+            return jsonify(hero)
+    return f"We were not able to find {search}."
 
 if __name__ == "__main__":
     app.run(debug=True)
