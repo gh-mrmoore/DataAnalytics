@@ -2,11 +2,16 @@ from splinter import Browser
 from bs4 import BeautifulSoup as bs
 import time
 
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
-    executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
-    return Browser("chrome", **executable_path, headless=False)
+    # executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
+    # return Browser("chrome", **executable_path, headless=False)
+    exe_path = {'executable_path': ChromeDriverManager().install()}
+    return Browser("chrome", **exe_path, headless=False)
+
 
 
 def scrape_info():
@@ -23,22 +28,23 @@ def scrape_info():
     soup = bs(html, "html.parser")
 
     # Get the average temps
-    # @TODO: YOUR CODE HERE!
+    weather_temps = soup.find_all('strong')
 
     # Get the min avg temp
-    # @TODO: YOUR CODE HERE!
+    min_avg_temp = weather_temps[1].text
 
     # Get the max avg temp
-    # @TODO: YOUR CODE HERE!
+    max_avg_temp = weather_temps[2].text
 
     # BONUS: Find the src for the sloth image
-    # @TODO: YOUR CODE HERE!
+    sloth_img = soup.find_all('img', class_='img-fluid animals')[1]['src']
+    sloth_url = f"https://visitcostarica.herokuapp.com/{sloth_img}"
 
     # Store data in a dictionary
     costa_data = {
-        "sloth_img": sloth_img,
-        "min_temp": min_temp,
-        "max_temp": max_temp
+        "sloth_img": sloth_url,
+        "min_temp": min_avg_temp,
+        "max_temp": max_avg_temp
     }
 
     # Quite the browser after scraping
