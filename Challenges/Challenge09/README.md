@@ -11,8 +11,10 @@ Evaluate temperature readings in Hawaii during the months of June and December. 
 ## Analysis
 
 ### Figure 1: June Temperature Summary Statistics
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge09/Resources/Fig1_june_df_describe.png" alt="Screen capture of June summary statistics dataframe." />
 
 ### Figure 2: December Temperature Summary Statistics
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge09/Resources/Fig2_december_df_describe.png" alt="Screen capture of December summary statistics dataframe." />
 
 ### Table 1: Yearly Average Temperature by Month
 | Month | Avg. Temperature |
