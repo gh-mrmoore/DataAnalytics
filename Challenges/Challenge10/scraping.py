@@ -12,7 +12,8 @@ def scrape_all():
     news_title, news_p = mars_news(browser)
 
     # Create dictionary to hold list of dictionaries with hemisphere url and title
-    hemis = {'mars_hemispheres': get_hemispheres(browser)}
+    # hemis = {'mars_hemispheres': get_hemispheres(browser)}
+    # hemis = get_hemispheres(browser)
 
     # Run scraping and save to dictionary
     data = {'news_title': news_title,
@@ -20,7 +21,7 @@ def scrape_all():
             'feature_image': featured_image(browser),
             'facts': mars_facts(),
             'last_modified': dt.datetime.now(),
-            'hemispheres': hemis
+            'hemispheres': get_hemispheres(browser),
             }
     
     # Stop webdriver and return data
@@ -96,7 +97,7 @@ def get_hemispheres(browser):
     hemisphere_image_urls = []
 
     # Visit URL
-    url = 'https://spaceimages-mars.com'
+    url = 'https://marshemispheres.com/'
     browser.visit(url)
 
     # Parse HTML
@@ -126,19 +127,19 @@ def get_hemispheres(browser):
         enhanced_html = browser.html
         enhanced_soup = soup(enhanced_html, 'html.parser')
 
-    # get the url of the jpg image (Sample in the link text)
-    original_image = enhanced_soup.find_all('a')
-    for link in original_image:
-        if link.text == "Sample":
-            full_img_url = url + link['href']
-            # print(full_img_url)
-            hemi_dict["img_url"] = full_img_url
-    
-    header2s = enhanced_soup.find_all('h2')
-    for header in header2s:
-        hemi_dict["title"] = header.text
-    
-    hemisphere_image_urls.append(hemi_dict)
+        # get the url of the jpg image (Sample in the link text)
+        original_image = enhanced_soup.find_all('a')
+
+        for link in original_image:
+            if link.text == "Sample":
+                full_img_url = url + link['href']
+                hemi_dict["img_url"] = full_img_url
+        
+        header2s = enhanced_soup.find_all('h2')
+        for header in header2s:
+            hemi_dict["title"] = header.text
+        
+        hemisphere_image_urls.append(hemi_dict)
 
     # return scraped data as a list of dictionaries with URL string and title
     return hemisphere_image_urls

@@ -6,11 +6,12 @@ import scraping
 app = Flask(__name__)
 
 # Connect to Mongo DB
-mongo = MongoClient("mongodb://localhost:27017/mars_app")
+mongo = MongoClient("mongodb://localhost:27017/mars_challenge_app")
 
 @app.route("/", methods=['GET'])
 def index():
     mars = mongo.db.mars.find_one()
+    # print(mars)
 
     return render_template("index.html", mars=mars)
 
