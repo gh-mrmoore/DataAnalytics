@@ -3,10 +3,13 @@ function handleSubmit() {
   // @TODO: YOUR CODE HERE
 
   // Select the input value from the form
+  var formStockInput = d3.select("#stockInput").node().value;
 
   // clear the input value
+  d3.select("#stockInput").node().value = "";
 
   // Build the plot with the new stock
+  buildPlot(formStockInput);
 }
 
 function getTimes(owmData) {
@@ -49,4 +52,4 @@ function buildPlot(stock) {
 }
 
 // Add event listener for submit button
-// @TODO: YOUR CODE HERE
+d3.select("#submit").on("change", handleSubmit);
