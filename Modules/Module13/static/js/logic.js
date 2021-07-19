@@ -11,5 +11,20 @@ attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStree
     accessToken: API_KEY
 });
 
+// Add a marker to the map for Los Angeles
+// let marker = L.marker([34.0522, -118.2437]).addTo(map);
+
+// Add circle to the map around downtown LA
+// let marker = L.circle([34.0522, -118.2437], {
+//     radius: 10000 // re-sized to be more visible
+//  }).addTo(map);
+
+// Use CircleMarker function
+let marker = L.circleMarker([34.0522, -118.2437], {
+    radius: 150,
+    color: "black",
+    fillColor: "#ffffa1"
+}).addTo(map);
+
 // Add 'graymap' tile layer to the map.
 streets.addTo(map);
