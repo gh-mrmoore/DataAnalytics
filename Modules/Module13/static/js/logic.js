@@ -20,11 +20,34 @@ attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStree
 //  }).addTo(map);
 
 // Use CircleMarker function
-let marker = L.circleMarker([34.0522, -118.2437], {
-    radius: 150,
-    color: "black",
-    fillColor: "#ffffa1"
-}).addTo(map);
+// let marker = L.circleMarker([34.0522, -118.2437], {
+//     radius: 150,
+//     color: "black",
+//     fillColor: "#ffffa1"
+// }).addTo(map);
 
+// Get city data
+let cityData = cities;
+
+// Loop thru cities array
+// Add marker for each city with population
+// cityData.forEach(function(city) {
+//     console.log(city);
+//     L.marker(city.location)
+//     .bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr /> <h3>Population " + city.population.toLocaleString() + "</h3>")
+//     .addTo(map);
+// });
+
+// Loop thru cities array
+// Add circle with radius proportionate to the population
+cityData.forEach(function(city) {
+    console.log(city);
+    L.circleMarker(city.location, {
+        radius: (city.population * 0.00001)
+    })
+    .bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr /> <h3>Population " + city.population.toLocaleString() + "</h3>")
+    .addTo(map);
+});
+  
 // Add 'graymap' tile layer to the map.
 streets.addTo(map);
