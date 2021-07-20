@@ -70,10 +70,27 @@ var countries = [
 
 
 // Loop through the countries array
-
+countries.forEach(function(country) {
+  console.log(country);
   // Conditionals for countries points
-
+  // Could send this to another function for clarity here...
+  if (country.points >= 200) {
+    circleColor = "blue"; // blue circle
+  } else if (country.points >= 150) {
+    circleColor = "green"; // green circle
+  } else if (country.points >= 100) {
+    circleColor = "yellow"; // yellow circle
+  } else {
+    circleColor = "red"; // red circle
+  }
   // Add circles to map
-
-
+  L.circleMarker(country.location, {
   // Adjust radius
+  radius: (country.points * .1),
+  color: circleColor,
+  // fillColor: circleColor,  // this seems to be redundant if you have color...
+  opacity: 0.75
+  })
+  .bindPopup(country.name + "<br /> Points: " + country.points)
+  .addTo(myMap);
+});
