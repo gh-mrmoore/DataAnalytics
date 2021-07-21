@@ -34,6 +34,18 @@ let baseMaps = {
 };
 
 // Get route data
-let torontoRoutes = "";
+let torontoRoutes = "https://raw.githubusercontent.com/gh-mrmoore/DataAnalytics/LinestringGeoJSON/Modules/Module13/static/js/torontoRoutes.json";
 
 // Add route data to map
+d3.json(torontoRoutes).then(function(data) {
+    console.log(data);
+    L.geoJSON(data, {
+        onEachFeature: function(feature, layer) {
+            console.log(layer);
+            layer.bindPopup("City: " + feature.properties.city)
+        }
+    }).addTo(map);
+});
+
+// Pass map layer to layer control, add layer control
+L.control.layers(baseMaps).addTo(map);
