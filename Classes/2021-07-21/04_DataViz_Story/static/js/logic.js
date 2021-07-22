@@ -39,11 +39,11 @@ let overlays = {
 
 // Get our GeoJSON data using d3.json
 d3.json(bostonNeighborhoods, function(data) {
-    L.geoJSON(data).addTo(map)
+    L.geoJSON(data).addTo(neighborhoods)
 });
 
 d3.json(chargingStations, function(data) {
-    L.geoJSON(data).addTo(map)
+    L.geoJSON(data).addTo(stations)
 });
 
 L.control.layers(baseMaps, overlays).addTo(map);
