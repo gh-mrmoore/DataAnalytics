@@ -38,10 +38,12 @@ let overlays = {
 };
 
 // Get our GeoJSON data using d3.json
+// add the data to the appropriate layer, not the map itself
 d3.json(bostonNeighborhoods, function(data) {
     L.geoJSON(data).addTo(neighborhoods)
 });
 
+// layers will be added to the map via the control.
 d3.json(chargingStations, function(data) {
     L.geoJSON(data).addTo(stations)
 });
