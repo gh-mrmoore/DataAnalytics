@@ -17,8 +17,11 @@
   * What is the purpose for choosing the data for your story?
   * How did you map the data?
     * Did you used multiple overlays and layers (maps)?
+    yes, but they're not quite working right...
     * Did you provide popups for the markers? 
+    not yet, time...
     * Did you add color to the MulitPolygon geometry features so they stand out? 
+    Nope - ran out of time...
   * What does the mapped data show the viewer?  
 
 * Suggested maps include:
