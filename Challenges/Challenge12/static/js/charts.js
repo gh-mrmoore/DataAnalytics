@@ -111,18 +111,56 @@ function buildCharts(sample) {
 
     // Deliverable 2
     // 1. Create the trace for the bubble chart.
-    var bubbleData = [
-
-    ];
+    var bubbleData = [{
+      x: otu_ids_sample,
+      y: these_sample_values,
+      text: otu_labels,
+      mode: 'markers',
+      marker:{
+        color: otu_ids_sample,
+        size: these_sample_values
+      }
+    }];
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      
+      title: "Bacteria Cultures per Sample",
+      showlegend: false,
+      // height: 600,
+      // width: 800
     };
 
     // 3. Use Plotly to plot the data with the layout.
-    Plotly.newPlot(); 
-    
+    Plotly.newPlot('bubble', bubbleData, bubbleLayout); 
+
+    // get WFREQ from the user metadata
+    var userData = data.metadata.filter(sampleObj => sampleObj.id == sample);
+    console.log("User Data");
+    console.log(userData[0].wfreq);
+    userWashes = userData[0].wfreq;
+
+    //create gauge chart
+    var gaugeData = [{
+      domain: {x: [0, 1], y: [0, 1]},
+      value: userWashes,
+      type: 'indicator',
+      mode: 'gauge+number+delta',
+      gauge: {
+        axis: {range: [0, 10]},
+        steps: [
+          { range: [0, 2], color: 'red'},
+          { range: [2, 4], color: 'orange'},
+          { range: [4, 6], color: 'yellow'},
+          { range: [6, 8], color: 'lightgreen'},
+          { range: [8, 10], color: 'green'}
+        ],
+        bar: {color: 'black'}
+      }
+    }]
+
+    var gaugeLayout = {margin: {t: 0, b: 0}};
+
+    Plotly.newPlot('gauge', gaugeData, gaugeLayout);
     
   });
 }
