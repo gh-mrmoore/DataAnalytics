@@ -88,37 +88,6 @@ function getColor(magnitude) {
     return "#98ee00";
 }
 
-// Create legend control object
-var legend = L.control({
-    position: "bottomright"
-});
-
-// Change grades to magnitude
-
-// Add details for the legend
-legend.onAdd = function() {
-    var div = L.DomUtil.create('div', 'info legend');
-    const magnitude = [0, 1, 2, 3, 4, 5];
-    const colors = [
-        "#98ee00",
-        "#d4ee00",
-        "#eecc00",
-        "#ee9c00",
-        "#ea822c",
-        "#ea2c2c"
-      ];    
-
-    // Loop thru magnitudes to create colored legend
-    for (var i = 0; i < magnitude.length; i++) {
-        // console.log(colors[i]);
-        div.innerHTML +=
-            "<span style='background-color: " + colors[i] + "'>" + "&nbsp;&nbsp;&nbsp;&nbsp;" + "</span> " +
-            magnitude[i] + (magnitude[i + 1] ? "&ndash;" + magnitude[i + 1] + "<br>" : "+");
-    }
-    return div;
-};
-
-legend.addTo(map);
 
 // Get our GeoJSON data using d3.json
 // Add tectonic plate data
@@ -156,6 +125,39 @@ d3.json(earthQuakeData, function(data) {
             layer.bindPopup("Magnitude: " + feature.properties.mag + "<hr />Location: " + feature.properties.place);
         }
     }).addTo(quakeLayer);
+
+    // Create legend control object
+    var legend = L.control({
+        position: "bottomright"
+    });
+
+    // Change grades to magnitude
+
+    // Add details for the legend
+    legend.onAdd = function() {
+        var div = L.DomUtil.create('div', 'info legend');
+        const magnitude = [0, 1, 2, 3, 4, 5];
+        const colors = [
+            "#98ee00",
+            "#d4ee00",
+            "#eecc00",
+            "#ee9c00",
+            "#ea822c",
+            "#ea2c2c"
+        ];    
+
+        // Loop thru magnitudes to create colored legend
+        for (var i = 0; i < magnitude.length; i++) {
+            // console.log(colors[i]);
+            div.innerHTML +=
+                "<span style='background-color: " + colors[i] + "'>" + "&nbsp;&nbsp;&nbsp;&nbsp;" + "</span> " +
+                magnitude[i] + (magnitude[i + 1] ? "&ndash;" + magnitude[i + 1] + "<br>" : "+");
+        }
+        return div;
+    };
+
+    legend.addTo(map);
+
 });
 
 // Add layer for M4.5+ Earthquakes for last 7 days

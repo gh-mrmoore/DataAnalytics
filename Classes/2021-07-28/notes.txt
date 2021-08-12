@@ -1,0 +1,10 @@
+dimensions are qualitative data
+
+measurements are quantitative data
+
+break down categories in to segments (rows)
+
+Parts of Data Storytelling:
+Data
+Visuals
+Narrative

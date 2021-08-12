@@ -18,7 +18,8 @@ let baseMaps = {
 
 // Use this link to get the geojson data.
 // var bostonNeighborhoods = "https://data.boston.gov/dataset/boston-neighborhoods1";
-var bostonNeighborhoods = "static/data/Boston_Neighborhoods.geojson";
+// var bostonNeighborhoods = "static/data/Boston_Neighborhoods.geojson";
+var bostonNeighborhoods = "static/data/PB2002_boundaries.geojson";
 // var chargingStations = "https://data.boston.gov/dataset/charging-stations1";
 var chargingStations = "static/data/Charging_Stations.geojson";
 
