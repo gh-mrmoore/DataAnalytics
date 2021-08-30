@@ -16,10 +16,13 @@ Determine whether bias exists in reviews submitted by Vine members. Vine members
 | Total | 31,830 | 14,777 | 46.4% |
 
 ### Image 1: Total Count of Reviews Examined
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge16/Resources/img1_total_counts.png" alt="Total Count of Reviews" />
 
 ### Image 2: Vine Review Counts
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge16/Resources/img2_vine_counts.png" alt="Vine Review Counts" />
 
 ### Image 3: Non-Vine Review Counts
+<img src="https://github.com/gh-mrmoore/DataAnalytics/blob/main/Challenges/Challenge16/Resources/img3_non_vine_counts.png" alt="Non-Vine Review Counts" />
 
 ## Summary
 While correlation does not necessarily equate causation, it does appear that Vine members rate tools more highly than those who are not Vine members that purchased a given tool themselves. Across the entire population, 5-star reviews occur about 46.4% of the time. This closely aligns with non-Vine reivews. Vine reviews, however, leave 5-star reviews at a 57.2% rate.
