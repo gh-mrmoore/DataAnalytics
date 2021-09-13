@@ -1,0 +1,2 @@
+initial accuracy: .8560
+initial loss: 0.2963
